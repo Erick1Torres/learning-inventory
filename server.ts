@@ -42,7 +42,12 @@ app.post('/productos', async (req, res) => {
     res.status(500).json({ error: 'Error al crear el producto' });
   }
 });
-0
-app.listen(3000, () => {
-  console.log('Servidor corriendo en http://localhost:3000');
-});
+
+// En local usamos el puerto 3000, en Vercel exportamos la app
+if (process.env.NODE_ENV !== 'production') {
+  app.listen(3000, () => {
+    console.log('Servidor corriendo en http://localhost:3000');
+  });
+}
+
+export default app;
