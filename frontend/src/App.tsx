@@ -10,7 +10,7 @@ function App() {
   const [productos, setProductos] = useState<Producto[]>([]);
 
   useEffect(() => {
-    fetch('lhttps://learning-inventory-khaki.vercel.app/products')
+    fetch('learning-inventory-z73b-5j856gjbn-erick1torres-projects.vercel.app/products')
       .then(res => res.json())
       .then(datos => setProductos(datos))
       .catch(err => console.error("Error al traer datos:", err));
