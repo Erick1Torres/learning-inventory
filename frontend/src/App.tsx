@@ -11,7 +11,7 @@ function App() {
 
   useEffect(() => {
     // URL corregida con https://, tu dominio correcto y el endpoint en español (/productos)
-    fetch('https://learning-inventory-khaki.vercel.app/productos')
+    fetch('learning-inventory-z73b.vercel.app/Producto')
       .then(res => res.json())
       .then(datos => setProductos(datos))
       .catch(err => console.error("Error al traer datos:", err));
