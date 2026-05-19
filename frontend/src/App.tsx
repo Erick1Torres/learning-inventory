@@ -10,7 +10,8 @@ function App() {
   const [productos, setProductos] = useState<Producto[]>([]);
 
   useEffect(() => {
-    fetch('learning-inventory-z73b-5j856gjbn-erick1torres-projects.vercel.app/products')
+    // URL corregida con https://, tu dominio correcto y el endpoint en español (/productos)
+    fetch('https://learning-inventory-khaki.vercel.app/productos')
       .then(res => res.json())
       .then(datos => setProductos(datos))
       .catch(err => console.error("Error al traer datos:", err));
